@@ -2,15 +2,17 @@ package com.example.movies;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Rating {
-    @SerializedName("kp")
-    private String kp;
+import java.io.Serializable;
 
-    public Rating(String kp) {
+public class Rating implements Serializable {
+    @SerializedName("kp")
+    private double kp;
+
+    public Rating(double kp) {
         this.kp = kp;
     }
 
-    public String getKp() {
+    public double getKp() {
         return kp;
     }
 
